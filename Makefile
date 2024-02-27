@@ -6,7 +6,6 @@ SRCS = ./srcs/free.c \
 			 ./srcs/rotate.c \
 			 ./srcs/sorting.c \
 			 ./srcs/push_swap.c \
-			 ./srcs/case_counter.c \
 			 ./srcs/stack_tools_1.c \
 			 ./srcs/stack_tools_2.c \
 			 ./srcs/stack_tools_3.c \

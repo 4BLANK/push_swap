@@ -61,12 +61,16 @@ void					rotate_to_b_target(t_stack_node **a, int t);
 void					push_b_to_a(t_stack_node **a, t_stack_node **b);
 void					fix_stack(t_stack_node **a);
 bool					check_wrong_input(char *args);
-void	push_b_to_a_alt(t_stack_node **a, t_stack_node **b);
-void	reset_node(t_stack_node *a, t_stack_node *b);
-void	case1_alt(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest);
-void	case2_alt(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest);
-void	case3_alt(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest);
-void	case4_alt(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest);
-void	set_a_med_pos(t_stack_node *a);
+void					push_b_to_a_alt(t_stack_node **a, t_stack_node **b);
+void					reset_node(t_stack_node *a, t_stack_node *b);
+void					case1_alt(t_stack_node **a, t_stack_node **b,
+							t_stack_node *cheapest);
+void					case2_alt(t_stack_node **a, t_stack_node **b,
+							t_stack_node *cheapest);
+void					case3_alt(t_stack_node **a, t_stack_node **b,
+							t_stack_node *cheapest);
+void					case4_alt(t_stack_node **a, t_stack_node **b,
+							t_stack_node *cheapest);
+void					set_a_med_pos(t_stack_node *a);
 
 #endif

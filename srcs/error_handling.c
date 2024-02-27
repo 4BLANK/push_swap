@@ -61,9 +61,7 @@ bool	check_wrong_input(char *args)
 	{
 		if (args[i] == '-' || args[i] == '+')
 		{
-			if (args[i - 1] == '-' || args[i - 1] == '+')
-				return (true);
-			if (args[i + 1] == '-' || args[i + 1] == '+')
+			if (!ft_isdigit(args[i + 1]))
 				return (true);
 		}
 		i++;

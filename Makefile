@@ -32,7 +32,6 @@ $(LIB):
 	@echo "Building libft..."
 	@(make -C ./libft/) > /dev/null
 
-
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 

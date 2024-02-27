@@ -10,9 +10,9 @@
 /*                                                                            */
 #ifndef LIBFT_H
 # define LIBFT_H
+# include "ft_printf.h"
 # include <stdlib.h>
 # include <unistd.h>
-# include "ft_printf.h"
 
 typedef struct s_list
 {
@@ -21,7 +21,7 @@ typedef struct s_list
 }					t_list;
 
 size_t				ft_strlen(const char *s);
-long					ft_atoi(const char *str);
+long				ft_atoi(const char *str);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);

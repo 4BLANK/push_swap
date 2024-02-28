@@ -75,8 +75,22 @@ bool	check_wrong_input(char *args)
 		{
 			if (!ft_isdigit(args[i + 1]))
 				return (true);
+			if (i != 0 && args[i - 1] != ' ')
+				return (true);
 		}
 		i++;
 	}
 	return (false);
+}
+
+void	handle_different_args(int ac, char **av)
+{
+	while (ac--)
+	{
+		if (check_empty(av[ac]))
+		{
+			write(1, "Error\n", 6);
+			exit(1);
+		}
+	}
 }

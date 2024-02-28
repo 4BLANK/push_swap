@@ -28,3 +28,16 @@ void	free_stack(t_stack_node **head, int status)
 	head = NULL;
 	exit(status);
 }
+
+void	free_av(int ac, char **av)
+{
+	int	i;
+
+	i = 0;
+	while (i <= ac)
+	{
+		free(av[i++]);
+	}
+	free(av[i]);
+	free(av);
+}

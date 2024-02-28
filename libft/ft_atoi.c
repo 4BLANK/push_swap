@@ -22,9 +22,9 @@ static int	is_space(char c)
 
 long	ft_atoi(const char *str)
 {
-	int					sign;
-	unsigned long long	result;
-	int					i;
+	int			sign;
+	long long	result;
+	int			i;
 
 	sign = 1;
 	result = 0;

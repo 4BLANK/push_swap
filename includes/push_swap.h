@@ -31,7 +31,7 @@ typedef struct s_stack_node
 void					add_node(t_stack_node **head, t_stack_node *node);
 int						stack_size(t_stack_node *stack);
 bool					is_sorted(t_stack_node *a);
-void					stack_init(int ac, char **av, t_stack_node **head);
+void					stack_init(char **av, t_stack_node **head);
 t_stack_node			*create_node(int number, int index);
 void					sa(t_stack_node **a, bool pr);
 void					sb(t_stack_node **b, bool pr);
@@ -84,7 +84,7 @@ void					case3_alt(t_stack_node **a, t_stack_node **b,
 void					case4_alt(t_stack_node **a, t_stack_node **b,
 							t_stack_node *cheapest);
 void					set_a_med_pos(t_stack_node *a);
-void					handle_different_args(int ac, char **av);
-void					free_av(int ac, char **av);
+void					handle_different_args(char **av);
+void					free_av(char **av);
 
 #endif

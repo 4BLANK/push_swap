@@ -31,8 +31,9 @@ void	process_args(int ac, char **av, t_stack_node **a)
 		exit(1);
 	}
 	av = ft_split(args, ' ');
+	ac--;
 	free(args);
-	stack_init(ac, av, a);
+	stack_init(av, a);
 	if (!a || check_dup(*a))
 	{
 		write(2, "Error\n", 6);
@@ -52,7 +53,7 @@ int	main(int ac, char *av[])
 		write(2, "Error\n", 6);
 		exit(1);
 	}
-	handle_different_args(ac, av);
+	handle_different_args(av);
 	process_args(ac, av, &a);
 	if (!is_sorted(a))
 	{

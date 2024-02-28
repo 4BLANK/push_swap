@@ -29,15 +29,14 @@ void	free_stack(t_stack_node **head, int status)
 	exit(status);
 }
 
-void	free_av(int ac, char **av)
+void	free_av(char **av)
 {
 	int	i;
 
 	i = 0;
-	while (i <= ac)
+	while (av[i])
 	{
 		free(av[i++]);
 	}
-	free(av[i]);
 	free(av);
 }

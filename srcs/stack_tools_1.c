@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void	stack_init(int ac, char **av, t_stack_node **head)
+void	stack_init(char **av, t_stack_node **head)
 {
 	int		i;
 	long	number;
@@ -24,16 +24,17 @@ void	stack_init(int ac, char **av, t_stack_node **head)
 	while (av && av[i])
 	{
 		number = ft_atoi(av[i]);
-		if (number >= 0 && (unsigned long)number > INT_MAX)
+		if ((number >= 0 && (unsigned long)number > INT_MAX)
+			|| (number < INT_MIN))
 		{
 			write(2, "Error\n", 6);
-			free_av(ac, av);
+			free_av(av);
 			return (free_stack(head, 1));
 		}
 		add_node(head, create_node(number, i));
 		i++;
 	}
-	free_av(ac, av);
+	free_av(av);
 }
 
 t_stack_node	*create_node(int number, int index)

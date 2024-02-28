@@ -83,11 +83,14 @@ bool	check_wrong_input(char *args)
 	return (false);
 }
 
-void	handle_different_args(int ac, char **av)
+void	handle_different_args(char **av)
 {
-	while (ac--)
+	int	i;
+
+	i = 0;
+	while (av[i])
 	{
-		if (check_empty(av[ac]))
+		if (check_empty(av[i++]))
 		{
 			write(1, "Error\n", 6);
 			exit(1);

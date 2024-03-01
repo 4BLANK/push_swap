@@ -31,7 +31,6 @@ void	process_args(int ac, char **av, t_stack_node **a)
 		exit(1);
 	}
 	av = ft_split(args, ' ');
-	ac--;
 	free(args);
 	stack_init(av, a);
 	if (!a || check_dup(*a))
